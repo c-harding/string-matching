@@ -3,7 +3,7 @@
 This project provides a command-line implementation of the naïve,
 Boyer-Moore-Horspool and Knuth-Morris-Pratt in Python, implemented
 as part of the University of Bristol’s Data Structures and Algorithms course.
-Each algorithm takes a pattern $P$ and a string $T$ to search for the pattern
+Each algorithm takes a pattern P and a string T to search for the pattern
 in, and returns the indices of matches.
 
 ## Naïve algorithm
@@ -13,10 +13,10 @@ to reduce necessary comparisons. It attempts every possible alignment of the
 pattern in the text, stopping when a mismatched character is found.
 
 In the worst case, this algorithm has
-$O\left(\left|T\right|\left|P\right|\right)$ runtime, which occurs when the
+O(|T| |P|) runtime, which occurs when the
 a significant part of the pattern matches at many positions in the string.
 
-In the best case, the algorithm has $O\left(\left|T\right|\right)$ runtime,
+In the best case, the algorithm has O(|T|) runtime,
 which occurs when the pattern is close in length to the text, or the first
 character of the pattern only occurs a few times in the text.
 
@@ -33,11 +33,11 @@ shifted by one position, but rather by the value in the shift table
 corresponding to the character in the text lined up with the end of the
 pattern.
 
-The preparing part takes $O\left(\left|P\right|\right)$ time.
+The preparing part takes O(|P|) time.
 
 In the worst case, the whole algorithm is still
-$O\left(\left|T\right|\left|P\right|\right)$, but in the average case the
-runtime is $O\left(\left|T\right|\right)$, performing best when the alphabet is
+O(|T||P|), but in the average case the
+runtime is O(|T|), performing best when the alphabet is
 large.
 
 ## Knuth-Morris-Pratt
@@ -52,6 +52,6 @@ of a mismatch, the algorithm searches earlier in the pattern, using the suffix
 of the string that has already been matched as the new part of the
 already-searched prefix.
 
-This algorithm has runtime $O\left(\left|T\right|)$, since the prefix-table
-takes $O\left(P\right)$ to build, and running the algorithm takes
-$O\left(\left|T\right|)$ time.
+This algorithm has runtime O(|T|), since the prefix-table
+takes O(P) to build, and running the algorithm takes
+O(|T|) time.
