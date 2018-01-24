@@ -36,7 +36,7 @@ pattern.
 The preparing part takes O(|P|) time.
 
 In the worst case, the whole algorithm is still
-O(|T||P|), but in the average case the
+O(|T| |P|), but in the average case the
 runtime is O(|T|), performing best when the alphabet is
 large.
 
