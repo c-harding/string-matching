@@ -9,7 +9,8 @@ class Comparer:
     
     def __call__(self, text, i, pattern, j=0):
         """
-        Run a comparison, and increment the comparison counter.
+        Run a comparison, printing the strings lined up with a caret at the
+        relevant position, and increment the comparison counter.
 
         :param text: The first string, typically the text being searched in.
         :param i: The index of the character from the first string to compare.
